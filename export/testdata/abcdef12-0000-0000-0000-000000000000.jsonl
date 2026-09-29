@@ -1,0 +1,15 @@
+{"type":"mode","mode":"normal","sessionId":"abcdef12-0000-0000-0000-000000000000"}
+{"type":"user","isMeta":true,"message":{"role":"user","content":"<local-command-caveat>Caveat</local-command-caveat>"},"cwd":"/tmp/proj","gitBranch":"main"}
+{"type":"user","message":{"role":"user","content":"Привіт! Покажи файл <main.go> & \"README\""},"cwd":"/tmp/proj","gitBranch":"main"}
+{"type":"assistant","message":{"role":"assistant","content":[{"type":"thinking","thinking":"hmm"}]}}
+{"type":"assistant","message":{"role":"assistant","content":[{"type":"text","text":"Зараз прочитаю."},{"type":"tool_use","id":"t1","name":"Read","input":{"file_path":"/tmp/proj/main.go","limit":10,"nested":{"z":1,"a":[1,2,{}],"html":"<b>&</b>"},"empty":[]}}]}}
+{"type":"user","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"t1","content":"package main\n\nfunc main() {}"}]}}
+{"type":"assistant","message":{"role":"assistant","content":[{"type":"tool_use","id":"t2","name":"Bash","input":{"command":"ls"}}]}}
+{"type":"user","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"t2","content":[{"type":"text","text":"a.txt"},{"type":"image","source":{"type":"base64","data":"xx"}},"plain",null]}]}}
+{"type":"user","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"t3","content":{"weird":true}},{"type":"tool_result","tool_use_id":"t4"}]}}
+not json at all
+{"type":"ai-title","aiTitle":"Тестова сесія","sessionId":"abcdef12-0000-0000-0000-000000000000"}
+{"type":"assistant","message":{"role":"assistant","content":[{"type":"text","text":"   "},{"type":"text"}]}}
+{"type":"assistant","message":"just a string"}
+{"type":"assistant","message":{"role":"assistant","content":[{"type":"text","text":"Готово ✅ — все працює."}]}}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"Дякую"},{"type":"tool_result","tool_use_id":"t5","content":"mixed"}]}}
